@@ -6,6 +6,8 @@ La letra e = enter
          u = ufat
 */
 
+
+
 var texto = document.querySelector(".texto");
 var resultText = document.querySelector(".resultado");
 
@@ -27,11 +29,11 @@ function encrypt() {
     
     if(encryptedText.trim() != "" && /^[a-zñ,.;: ]+$/.test(encryptedText) ){
        
-        encryptedText = encryptedText.replaceAll("e", "enter");
-        encryptedText = encryptedText.replaceAll("i", "imes");
-        encryptedText = encryptedText.replaceAll("a", "ai");
-        encryptedText = encryptedText.replaceAll("o", "ober");
-        encryptedText = encryptedText.replaceAll("u", "ufat");
+        encryptedText =  replaceSubstring(encryptedText, "e", "enter");
+        encryptedText = replaceSubstring(encryptedText, "i", "imes");
+        encryptedText = replaceSubstring(encryptedText, "a", "ai");
+        encryptedText = replaceSubstring(encryptedText, "o", "ober");
+        encryptedText = replaceSubstring(encryptedText, "u", "ufat");
         
         imageNotFound.style.display = "none";
         resultText.style.display = "inline";
@@ -43,6 +45,8 @@ function encrypt() {
     
         texto.focus();
         
+        alert(encryptedText);
+        
         return null;
     }
     
@@ -52,16 +56,26 @@ function encrypt() {
 }
 
 
+
 function decrypt() {
     var encryptedText = texto.value;
     
     if(encryptedText.trim() != "" ){
-        encryptedText = encryptedText.replaceAll("enter", "e");
-        encryptedText = encryptedText.replaceAll("imes", "i");
-        encryptedText = encryptedText.replaceAll("ai", "a");
-        encryptedText = encryptedText.replaceAll("ober", "o");
-        encryptedText = encryptedText.replaceAll("ufat", "u");
-    
+        encryptedText = replaceSubstring(encryptedText, "enter", "e");
+        
+            
+        encryptedText = replaceSubstring(encryptedText, "imes", "i");
+   
+        
+        encryptedText = replaceSubstring(encryptedText, "ai", "a");
+        
+   
+        
+        encryptedText = replaceSubstring(encryptedText, "ober", "o");
+        
+        
+        encryptedText = replaceSubstring(encryptedText, "ufat", "u");
+       
         imageNotFound.style.display = "none";
         resultText.style.display = "inline";
         btnCpy.style.display = "inline";
