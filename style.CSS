@@ -1,0 +1,82 @@
+body{
+    
+    background: #CCCCCC;
+    width: 100vw;
+    
+}
+
+img {
+    border-radius: 15px;
+    
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+}
+
+header .logo-alura{
+    height: inherit;
+}
+
+
+.texto{
+    display: block;
+    width: 60vw;
+    height: 40vh;
+    border: none;
+    outline: none;
+    resize: none;
+    margin: auto;
+    
+}
+
+
+.clase-desencriptar {
+    
+    width: 15vw;
+    height: 10vh;
+    background: yellow;
+    margin: auto;
+    padding: 5vh 25vw;
+}
+
+.encrypt, .decrypt {
+    width: 5vw;
+    height: 5vh;
+    margin: 1vw;
+    font-size: 1vw;
+}
+
+
+
+.notFoundMessage {
+    position: absolute;
+    width: 16vw;
+    height: 60vh;
+    right: 0;
+    top: 21vh;
+    margin: auto;
+}
+
+ .resultado {
+    position: absolute;
+    width: 16vw;
+    height: 60vh;
+    right: 0;
+    top: 21vh;
+     
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1.5vw;
+}
+
+.cpy {
+    position: absolute;
+    right: 0;
+    width: 5vw;
+    height: 5vh;
+    font-size: 1vw;
+}
+
